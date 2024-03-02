@@ -1,3 +1,5 @@
+"use client"
+"use client"
 import React from "react";
 import Img from "../img/hero-img.png";
 import Image from "next/image";
@@ -5,104 +7,45 @@ import Clients from "../Clients/page"
 import { FaAngleDown } from "react-icons/fa";
 import { SiYoutubemusic } from "react-icons/si";
 import Link from 'next/link';
-// import LogoImg from "../../assets/img/logo.png";
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import LogoImg from "../../assets/img/logo-bg-remove-removebg-preview.png" ;
 function page() {
   return (
     <>
-      <header id="header" className="fixed-top header-scrolled  ">
-        <div className="container d-flex align-items-center">
-          <h1 className="logo me-auto">
-            <a href="index.html" className="text-decoration-none" >Arsha</a>
-          </h1>
+      {/* <header id="header" className="fixed-top header-scrolled  ">
+      
+      </header> */}
+          <Navbar expand="lg"  id="header" className="fixed-top header-scrolled">
+      <Container >
+        <Navbar.Brand href="#" className="main-color "  ><Image src={LogoImg}  className="logo-name" alt="logo-image" /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" className="toggle-btn " />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="ms-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' ,}}
+            navbarScroll
+          >
+            <Nav.Link href="#home" className="main-color" >Home</Nav.Link>
+            <Nav.Link href="#about"  className="main-color " >About</Nav.Link>
+            <Nav.Link href="#services"  className="main-color "  >Services</Nav.Link>
+            <Nav.Link href="#portfolio"  className="main-color " > Portfolio</Nav.Link>
 
-          {/* <a href="index.html" className="logo me-auto">
-            <Image src={LogoImg} alt="" className="img-fluid" />
-          </a> */}
+            <Nav.Link href="#team"  className="main-color "  >    Team</Nav.Link>
+            <Nav.Link href="#contact"  className="main-color "  >    Contact</Nav.Link>
+            <Nav.Link href="#about"  className=" getstarted main-color" >    Get Started</Nav.Link>
 
-          <nav id="navbar" className="navbar">
-            <ul>
-              <li>
-                <Link className="nav-link scrollto active" href="/#hero">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link scrollto" href="/#about">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link scrollto" href="/#services">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link   scrollto" href="/#portfolio">
-                  Portfolio
-                </Link>
-              </li>
-              <li>
-                <Link className="nav-link scrollto" href="/#team">
-                  Team
-                </Link>
-              </li>
-              <li className="dropdown">
-                <Link href="#" className="text-decoration-none" >
-                  <span>Drop Down</span> <FaAngleDown/>
-                </Link>
-                <ul>
-                  <li>
-                    <Link href="#" className="text-decoration-none">Drop Down 1</Link>
-                  </li>
-                  <li className="dropdown">
-                    <Link href="#" className="text-decoration-none">
-                      <span>Deep Drop Down</span>{" "}
-                      <i className="bi bi-chevron-right"></i>
-                    </Link>
-                    <ul>
-                      <li>
-                        <Link href="#" className="text-decoration-none">Deep Drop Down 1</Link>
-                      </li>
-                      <li>
-                        <Link href="#" className="text-decoration-none">Deep Drop Down 2</Link>
-                      </li>
-                      <li>
-                        <Link href="#" className="text-decoration-none">Deep Drop Down 3</Link>
-                      </li>
-                      <li>
-                        <Link href="#" className="text-decoration-none">Deep Drop Down 4</Link>
-                      </li>
-                      <li>
-                        <Link href="#" className="text-decoration-none">Deep Drop Down 5</Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-decoration-none">Drop Down 2</Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-decoration-none">Drop Down 3</Link>
-                  </li>
-                  <li>
-                    <Link href="#" className="text-decoration-none">Drop Down 4</Link>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <Link className="nav-link scrollto" href="/#contact">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link className="getstarted scrollto text-decoration-none" href="/#about">
-                  Get Started
-                </Link>
-              </li>
-            </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
-          </nav>
-        </div>
-      </header>
+          </Nav>
+        
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  
       <section id="hero" className="d-flex align-items-center">
         <div className="container">
           <div className="row">
